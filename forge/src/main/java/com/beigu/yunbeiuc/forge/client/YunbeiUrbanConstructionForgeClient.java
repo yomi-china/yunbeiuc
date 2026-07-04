@@ -30,6 +30,7 @@ import com.beigu.yunbeiuc.render.ZonesBoardOverWeightEntityRenderer;
 import com.beigu.yunbeiuc.render.ZonesBoardTimeRange1EntityRenderer;
 import com.beigu.yunbeiuc.render.ZonesBoardTimeRange2EntityRenderer;
 import com.beigu.yunbeiuc.render.json.FlagLoader;
+import com.beigu.yunbeiuc.render.CustomFontManager;
 import dev.architectury.registry.client.rendering.BlockEntityRendererRegistry;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import net.minecraft.client.MinecraftClient;
@@ -502,6 +503,7 @@ public class YunbeiUrbanConstructionForgeClient {
             BlockEntityRendererRegistry.register(ModBlockEntities.ZONES_BOARD_OVER_WEIGHT_ENTITY.get(), ZonesBoardOverWeightEntityRenderer::new);
 
             FlagLoader.loadFlags(MinecraftClient.getInstance().getResourceManager());
+            CustomFontManager.getInstance().onResourceReload();
         });
     }
 }
