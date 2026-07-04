@@ -91,7 +91,7 @@ public class GantryFrameConnection extends Block {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         Item item = player.getStackInHand(hand).getItem();
 
-        if (item == ModItems.WAND) {
+        if (item == ModItems.WAND.get()) {
             if (!world.isClient) {
                 isManualUpdate = true;
 

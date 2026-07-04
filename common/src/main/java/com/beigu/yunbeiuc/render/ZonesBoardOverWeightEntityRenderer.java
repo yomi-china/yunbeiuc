@@ -31,17 +31,17 @@ public class ZonesBoardOverWeightEntityRenderer implements BlockEntityRenderer<Z
 
         Direction facing = entity.getCachedState().get(ZonesBoardOverWeight.FACING);
         ZonesBoardOverWeight.Type type = entity.getCachedState().get(ZonesBoardOverWeight.TYPE);
-        if(currentBlock == SignBlocks.ZONES_BOARD_OVER_WEIGHT || currentBlock == SignBlocks.ZONES_BOARD_TIME_LIMIT) {
+        if(currentBlock == SignBlocks.ZONES_BOARD_OVER_WEIGHT.get() || currentBlock == SignBlocks.ZONES_BOARD_TIME_LIMIT.get()) {
             renderRightText(matrices, vertexConsumers, light, facing, text1, type, -5f, 5.5f, true);
-        } else if (currentBlock == SignBlocks.ZONES_BOARD_SUGGESTED_SPEED) {
+        } else if (currentBlock == SignBlocks.ZONES_BOARD_SUGGESTED_SPEED.get()) {
             renderRightText(matrices, vertexConsumers, light, facing, text1, type, -6f, 0f, false);
-        } else if (currentBlock == SignBlocks.ZONES_BOARD_LENGTH) {
+        } else if (currentBlock == SignBlocks.ZONES_BOARD_LENGTH.get()) {
             renderCentreText(matrices, vertexConsumers, light, facing, text1, type, 1f, 0f, false);
-        } else if (currentBlock == SignBlocks.ZONES_BOARD_DISTANCE_LENGTH) {
+        } else if (currentBlock == SignBlocks.ZONES_BOARD_DISTANCE_LENGTH.get()) {
             renderCentreText(matrices, vertexConsumers, light, facing, text1, type, 0f, 0f, false);
-        } else if (currentBlock == SignBlocks.ZONES_BOARD_DISTANCE_LENGTH_LEFT) {
+        } else if (currentBlock == SignBlocks.ZONES_BOARD_DISTANCE_LENGTH_LEFT.get()) {
             renderCentreText(matrices, vertexConsumers, light, facing, text1, type, 0f, 1f, true);
-        } else if (currentBlock == SignBlocks.ZONES_BOARD_DISTANCE_LENGTH_RIGHT) {
+        } else if (currentBlock == SignBlocks.ZONES_BOARD_DISTANCE_LENGTH_RIGHT.get()) {
             renderCentreText(matrices, vertexConsumers, light, facing, text1, type, -2f, 1f, true);
         }
     }

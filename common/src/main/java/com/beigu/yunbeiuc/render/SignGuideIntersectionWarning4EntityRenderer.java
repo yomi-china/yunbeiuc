@@ -69,7 +69,7 @@ public class SignGuideIntersectionWarning4EntityRenderer implements BlockEntityR
 
         Direction facing = entity.getCachedState().get(SignGuideIntersectionWarning4.FACING);
         SignGuideIntersectionWarning4.Type type = entity.getCachedState().get(SignGuideIntersectionWarning4.TYPE);
-        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_4){
+        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_4.get()){
             renderDirectionLogo(matrices, vertexConsumers, light, overlay, facing, direction1, -13f, 0f, type);
             renderText1(matrices, vertexConsumers, light, facing, text1, type, 4f, 0f, direction1);
         }else{

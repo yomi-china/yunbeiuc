@@ -101,7 +101,7 @@ public class RoadNameSignBlockEntityRenderer implements BlockEntityRenderer<Road
 
         int textColor = isSmallScale ? 0X000000 : 0xFFFFFF;
 
-        if(this.currentBlock == MunicipalBlocks.ROAD_NAME_SIGN_RA){
+        if(this.currentBlock == MunicipalBlocks.ROAD_NAME_SIGN_RA.get()){
             textColor = 0xFFFFFF;
         }
 
@@ -153,7 +153,7 @@ public class RoadNameSignBlockEntityRenderer implements BlockEntityRenderer<Road
         matrices.translate(centeredX, centeredY, zOffset / 16f);
         matrices.scale(0.02f, -0.02f, 0.02f);
 
-        if(this.currentBlock == MunicipalBlocks.ROAD_NAME_SIGN_RA){
+        if(this.currentBlock == MunicipalBlocks.ROAD_NAME_SIGN_RA.get()){
             color = 0xFFFFFF;
         }
 

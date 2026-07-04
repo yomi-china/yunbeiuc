@@ -33,7 +33,7 @@ public class SignGuideIntersectionAdvanceWarning1EntityRenderer implements Block
         Direction facing = entity.getCachedState().get(SignGuideIntersectionAdvanceWarning1.FACING);
         SignGuideIntersectionAdvanceWarning1.Type type = entity.getCachedState().get(SignGuideIntersectionAdvanceWarning1.TYPE);
 
-        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_ADVANCE_WARNING_2){
+        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_ADVANCE_WARNING_2.get()){
             renderText(matrices, vertexConsumers, light, facing, text1, type, -17f, 10f);
             renderText(matrices, vertexConsumers, light, facing, text2, type, 3f,  -1f);
         }else {

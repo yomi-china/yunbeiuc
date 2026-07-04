@@ -64,7 +64,7 @@ public class SignGuideConfirmation1EntityRenderer implements BlockEntityRenderer
 
         Block currentBlock = entity.getCachedState().getBlock();
 
-        if(currentBlock == SignBlocks.SIGN_GUIDE_CONFIRMATION_1){
+        if(currentBlock == SignBlocks.SIGN_GUIDE_CONFIRMATION_1.get()){
             renderLeftText(matrices, vertexConsumers, light, facing, text1, type, -16f, 11f);
             renderLeftText(matrices, vertexConsumers, light, facing, text2, type, -16f, 0f);
             renderLeftText(matrices, vertexConsumers, light, facing, text3, type, -16f, -11f);

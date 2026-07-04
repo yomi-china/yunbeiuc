@@ -102,7 +102,7 @@ public class BarrierGate1PoleHorizontal extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient && player.getStackInHand(hand).isOf(ModItems.WAND)) {
+        if (!world.isClient && player.getStackInHand(hand).isOf(ModItems.WAND.get())) {
             world.setBlockState(pos, state.cycle(GATE_TYPE), 3);
         }
         return ActionResult.SUCCESS;

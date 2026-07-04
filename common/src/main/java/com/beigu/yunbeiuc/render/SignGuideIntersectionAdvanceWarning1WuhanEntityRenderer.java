@@ -45,7 +45,7 @@ public class SignGuideIntersectionAdvanceWarning1WuhanEntityRenderer implements 
         Direction facing = entity.getCachedState().get(SignGuideIntersectionAdvanceWarning1Wuhan.FACING);
         SignGuideIntersectionAdvanceWarning1Wuhan.Type type = entity.getCachedState().get(SignGuideIntersectionAdvanceWarning1Wuhan.TYPE);
 
-        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_ADVANCE_WARNING_1_WUHAN_RIGHT){
+        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_ADVANCE_WARNING_1_WUHAN_RIGHT.get()){
             renderText(matrices, vertexConsumers, light, facing, text1, type, true, 16.5f, 12f, true);
             renderText(matrices, vertexConsumers, light, facing, text2, type, true, 16.5f, -12f, true);
             renderText(matrices, vertexConsumers, light, facing, cnText3, type, false, -6f, 12f, false);

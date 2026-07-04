@@ -88,7 +88,7 @@ public class RoadLightingLamp extends Block {
         ItemStack heldItem = player.getStackInHand(hand);
         // 直接使用 ModItems.WAND 判断是否为魔杖
         if (!world.isClient()) {
-            if (heldItem.isOf(ModItems.WAND)) {
+            if (heldItem.isOf(ModItems.WAND.get())) {
                 boolean newLitState = !state.get(LIT);
                 LightTFState newLightState = state.get(LIGHT_TF_STATE).next();
                 world.setBlockState(pos, state.with(LIT, newLitState).with(LIGHT_TF_STATE, newLightState));

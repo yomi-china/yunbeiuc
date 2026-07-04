@@ -81,7 +81,7 @@ public class RubbishBinWhite extends Block {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack heldItem = player.getStackInHand(hand);
         NumberState currentState = state.get(NUMBER_STATE);
-        if (heldItem.isOf(ModItems.WAND)) {
+        if (heldItem.isOf(ModItems.WAND.get())) {
             world.setBlockState(pos, state.with(NUMBER_STATE, NumberState.ZERO));
             return ActionResult.success(world.isClient());
         }else {

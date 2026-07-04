@@ -75,7 +75,7 @@ public class BarrierGate1MainSlab extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient && player.getStackInHand(hand).isOf(ModItems.WAND)) {
+        if (!world.isClient && player.getStackInHand(hand).isOf(ModItems.WAND.get())) {
             PoleType next = state.get(POLE_TYPE) == PoleType.LONGITUDINAL ? PoleType.HORIZONTAL : PoleType.LONGITUDINAL;
             world.setBlockState(pos, state.with(POLE_TYPE, next), Block.NOTIFY_ALL);
         }

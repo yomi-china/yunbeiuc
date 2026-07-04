@@ -75,7 +75,7 @@ public class SignGuideIntersectionAdvanceWarning1Wuhan extends BlockWithEntity i
     public ActionResult onUse(BlockState state, World world, BlockPos pos,
                               PlayerEntity player, Hand hand, BlockHitResult hit) {
         Item item = player.getStackInHand(hand).getItem();
-        if (item == ModItems.WAND) {
+        if (item == ModItems.WAND.get()) {
             if (world.isClient()) {
                 openTextDisplayScreen(pos);
             }

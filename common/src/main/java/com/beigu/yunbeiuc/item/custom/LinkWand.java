@@ -107,7 +107,7 @@ public class LinkWand extends Item {
 
         for (BlockPos pos : selections) {
             Direction facing = world.getBlockState(pos).get(TrafficLightsBlock.FACING);
-            boolean isLeft = world.getBlockState(pos).getBlock() == MunicipalBlocks.TRAFFIC_LIGHTS_LEFT;
+            boolean isLeft = world.getBlockState(pos).getBlock() == MunicipalBlocks.TRAFFIC_LIGHTS_LEFT.get();
             if (isLeft) {
                 leftMap.get(facing).add(pos);
             } else {
@@ -154,7 +154,7 @@ public class LinkWand extends Item {
         for (BlockPos pos : selections) {
             Direction facing = world.getBlockState(pos).get(TrafficLightsBlock.FACING);
             // T字路口只允许直行灯
-            boolean isLeft = world.getBlockState(pos).getBlock() == MunicipalBlocks.TRAFFIC_LIGHTS_LEFT;
+            boolean isLeft = world.getBlockState(pos).getBlock() == MunicipalBlocks.TRAFFIC_LIGHTS_LEFT.get();
             if (isLeft) {
                 return null; // 不允许左转灯
             }

@@ -73,7 +73,7 @@ public class SignGuideIntersectionWarning1 extends BlockWithEntity implements Bl
     public ActionResult onUse(BlockState state, World world, BlockPos pos,
                               PlayerEntity player, Hand hand, BlockHitResult hit) {
         Item item = player.getStackInHand(hand).getItem();
-        if (item == ModItems.WAND) {
+        if (item == ModItems.WAND.get()) {
             if (world.isClient()) {
                 openTextDisplayScreen(pos);
             }

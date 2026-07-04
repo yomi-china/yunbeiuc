@@ -57,7 +57,7 @@ public class ZonesBoard1EntityRenderer implements BlockEntityRenderer<ZonesBoard
         matrices.translate(centeredX, centeredY, zOffset);
 
         int color = 0X000000;
-        if(currentBlock == SignBlocks.ZONES_BOARD_RED) color = 0XFFFFFF;
+        if(currentBlock == SignBlocks.ZONES_BOARD_RED.get()) color = 0XFFFFFF;
 
         matrices.scale(scaleValue, -scaleValue, scaleValue);
 

@@ -16,15 +16,16 @@ public final class YunbeiUrbanConstruction {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static void init() {
-        LOGGER.info("YunbeiUrbanConstruction has finished loading");
-
+        // First register blocks, then items (which depend on blocks via BlockItem)
         MunicipalBlocks.init();
         RoadBlocks.init();
         SignBlocks.init();
+        ModItems.init();
         ModBlockEntities.init();
-        ModItems.registerItems();
         ModItemGroups.init();
         ModMessages.registerC2SPackets();
         ModEvents.register();
+
+        LOGGER.info("YunbeiUrbanConstruction has finished loading");
     }
 }

@@ -81,7 +81,7 @@ public class TrafficLightsPavement extends Block {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack heldItem = player.getStackInHand(hand);
         // 直接使用 ModItems.WAND 判断是否为魔杖
-        if (heldItem.isOf(ModItems.WAND)) {
+        if (heldItem.isOf(ModItems.WAND.get())) {
             LightPavementState nextState = state.get(LIGHT_PAVEMENT_STATE).next();
             world.setBlockState(pos, state.with(LIGHT_PAVEMENT_STATE, nextState));
             return ActionResult.success(world.isClient());

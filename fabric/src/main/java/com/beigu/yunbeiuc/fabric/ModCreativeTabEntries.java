@@ -4,7 +4,6 @@ import com.beigu.yunbeiuc.YunbeiUrbanConstruction;
 import com.beigu.yunbeiuc.block.MunicipalBlocks;
 import com.beigu.yunbeiuc.block.RoadBlocks;
 import com.beigu.yunbeiuc.block.SignBlocks;
-import com.beigu.yunbeiuc.item.ModItemGroups;
 import com.beigu.yunbeiuc.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemStack;
@@ -15,9 +14,11 @@ import net.minecraft.util.Identifier;
 public class ModCreativeTabEntries {
 
     public static void register() {
+        // Municipal tab
         ItemGroupEvents.modifyEntriesEvent(
                 RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(YunbeiUrbanConstruction.MOD_ID, "municipal"))
         ).register(entries -> {
+            // References use block.get().asItem() which now works because BlockItems are registered
             entries.add(new ItemStack(MunicipalBlocks.ROAD_POLE_FOUNDATIONS.get().asItem()));
             entries.add(new ItemStack(MunicipalBlocks.ROAD_POLE_FOUNDATIONS_SLAB.get().asItem()));
             entries.add(new ItemStack(MunicipalBlocks.ROAD_POLE_LONGITUDINAL.get().asItem()));
@@ -152,6 +153,7 @@ public class ModCreativeTabEntries {
             entries.add(new ItemStack(MunicipalBlocks.BARRIER_GATE_1_POLE_LONGITUDINAL.get().asItem()));
         });
 
+        // Road tab
         ItemGroupEvents.modifyEntriesEvent(
                 RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(YunbeiUrbanConstruction.MOD_ID, "rb"))
         ).register(entries -> {
@@ -291,16 +293,18 @@ public class ModCreativeTabEntries {
             entries.add(new ItemStack(RoadBlocks.MANHOLE_COVER.get().asItem()));
         });
 
+        // Sign tab — use ModItems.ALL_SIGN_ITEMS list for all sign blocks
         ItemGroupEvents.modifyEntriesEvent(
                 RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(YunbeiUrbanConstruction.MOD_ID, "sign"))
         ).register(entries -> {
-            entries.add(new ItemStack(SignBlocks.SIGN_STOP.get().asItem()));
-            // TODO: sign blocks — copy remaining entries from original ModItemGroups
-            entries.add(new ItemStack(ModItems.WAND));
-            entries.add(new ItemStack(ModItems.TREE_WAND));
-            entries.add(new ItemStack(ModItems.WATER_WAND));
-            entries.add(new ItemStack(ModItems.ROTATED_WAND));
-            entries.add(new ItemStack(ModItems.LINK_WAND));
+            for (var supplier : ModItems.ALL_SIGN_ITEMS) {
+                entries.add(new ItemStack(supplier.get()));
+            }
+            entries.add(new ItemStack(ModItems.WAND.get()));
+            entries.add(new ItemStack(ModItems.TREE_WAND.get()));
+            entries.add(new ItemStack(ModItems.WATER_WAND.get()));
+            entries.add(new ItemStack(ModItems.ROTATED_WAND.get()));
+            entries.add(new ItemStack(ModItems.LINK_WAND.get()));
         });
     }
 }

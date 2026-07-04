@@ -36,19 +36,19 @@ public class SignGuideIntersectionWarning1EntityRenderer implements BlockEntityR
 
         Direction facing = entity.getCachedState().get(SignGuideIntersectionWarning1.FACING);
         SignGuideIntersectionWarning1.Type type = entity.getCachedState().get(SignGuideIntersectionWarning1.TYPE);
-        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_1 || currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_6){
+        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_1.get() || currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_6.get()){
             renderText(matrices, vertexConsumers, light, facing, text1, type, 0f, 0f, true);
-        }else if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_2){
+        }else if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_2.get()){
             renderText(matrices, vertexConsumers, light, facing, text1, type, -2.5f, 0f, true);
-        }else if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_3){
+        }else if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_WARNING_3.get()){
             renderText(matrices, vertexConsumers, light, facing, text1, type, 0f, 0f, true);
-        }else if(currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_1 || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_2 || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_3){
+        }else if(currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_1.get() || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_2.get() || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_3.get()){
             renderUnitText(matrices, vertexConsumers, light, facing, text1, type, 5f, 0f, false);
             renderUnitText(matrices, vertexConsumers, light, facing, "km", type, 9f, -0.5f, true);
-        }else if(currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_4 || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_5 || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_6){
+        }else if(currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_4.get() || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_5.get() || currentBlock == SignBlocks.SIGN_GUIDE_DISTANCE_TO_TUNNEL_EXIT_6.get()){
             renderUnitText(matrices, vertexConsumers, light, facing, text1, type, -0.5f, -4f, false);
             renderUnitText(matrices, vertexConsumers, light, facing, "km", type, 3.5f, -4.5f, true);
-        }else if(currentBlock == SignBlocks.SIGN_GUIDE_ODOMETER){
+        }else if(currentBlock == SignBlocks.SIGN_GUIDE_ODOMETER.get()){
             renderText(matrices, vertexConsumers, light, facing, text1, type, 0f, 3f, false);
         }
     }

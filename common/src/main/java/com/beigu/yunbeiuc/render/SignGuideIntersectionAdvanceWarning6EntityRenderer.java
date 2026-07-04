@@ -46,7 +46,7 @@ public class SignGuideIntersectionAdvanceWarning6EntityRenderer implements Block
         SignGuideIntersectionAdvanceWarning6.Type type = entity.getCachedState().get(SignGuideIntersectionAdvanceWarning6.TYPE);
         Block currentBlock = entity.getCachedState().getBlock();
 
-        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_ADVANCE_WARNING_6){
+        if(currentBlock == SignBlocks.SIGN_GUIDE_INTERSECTION_ADVANCE_WARNING_6.get()){
             renderDirectionLogo1(matrices, vertexConsumers, light, overlay, facing, direction1, -13f, 6f, type);
             renderDirectionLogo1(matrices, vertexConsumers, light, overlay, facing, direction2, -13f, -6f, type);
             renderText1(matrices, vertexConsumers, light, facing, text1, type, 6f, 6f, direction1);
